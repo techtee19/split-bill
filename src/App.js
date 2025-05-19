@@ -112,7 +112,7 @@ function Friend({ friend, onSelection, selectedFriend }) {
 
 function FormAddFriend({ onAddFriend }) {
   const [name, setName] = useState("");
-  const [image, setImage] = useState(" ");
+  const [image, setImage] = useState("");
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -155,7 +155,7 @@ function FormAddFriend({ onAddFriend }) {
 }
 
 function FormSplitBill({ selectedFriend }) {
-  const [bill, serBill] = useState("");
+  const [bill, setBill] = useState("");
   const [userExpense, setUserExpense] = useState("");
   const [whoIsPaying, setWhoIsPaying] = useState("user");
   return (
@@ -166,10 +166,10 @@ function FormSplitBill({ selectedFriend }) {
       <input
         type="text"
         value={bill}
-        onChange={(e) => serBill(Number(e.target.value))}
+        onChange={(e) => setBill(Number(e.target.value))}
       />
 
-      <label>🧍‍♂️Your Expense</label>
+      <label>🧍Your Expense</label>
       <input
         type="text"
         value={userExpense}
